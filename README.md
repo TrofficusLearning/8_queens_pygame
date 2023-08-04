@@ -1,6 +1,10 @@
 # 8 Queens Problem Solver - Backtracking Algorithm
 
-![Game Demo](img/8queens_gif.gif)
+---
+
+<div align="center">
+  <img src="img/8queens_gif.gif" alt="Your GIF" width="400">
+</div>
 
 ## Introduction
 
