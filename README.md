@@ -6,42 +6,69 @@
   <img src="img/8queens_gif.gif" alt="Your GIF" width="400">
 </div>
 
-## Introduction
 
-The 8 Queens Problem Solver is a cool little project that aims to solve the classic 8 Queens Problem using a Backtracking Algorithm. The 8 Queens Problem is a puzzle that requires placing eight queens on an 8x8 chessboard in a way that no two queens threaten each other. This means no two queens are allowed to share the same row, column, or diagonal. The problem is a classic example of a constraint satisfaction problem and is often used to demonstrate backtracking algorithms.
+## N Queens Game
 
-## How to Use
+The N Queens Game is a classic chess puzzle that involves placing N queens on an N x N chessboard, such that no two queens threaten each other. A queen can move horizontally, vertically, or diagonally. The challenge is to find a configuration where all the queens are safe and do not attack each other.
 
-1. Clone the repository to your local machine.
-2. Make sure you have [Python](https://www.python.org/) installed (version 3.x recommended).
-3. Navigate to the project directory in your terminal or command prompt.
-4. Run the `8_queens_solver.py` script using Python:
+In this repository, we provide a Python implementation of the 8 Queens Game. The game has two modes:
 
-```bash
-python 8_queens_solver.py
-```
+1. Manual Mode (queens.py): In this mode, you can run the `queens.py` script, which creates an 8x8 chessboard. You can manually place the queens on the board and see if you can solve the puzzle by positioning all the queens safely.
 
-5. The program will run the backtracking algorithm to find and display a solution for the 8 Queens Problem. It will print the chessboard with queens placed such that no two queens threaten each other.
+2. Automatic Mode (queens_backtracking.py): In this mode, you can run the `queens_backtracking.py` script, which automatically solves the 8 Queens problem using the backtracking algorithm.
 
-## Backtracking Algorithm
+## How to Play
 
-The backtracking algorithm is a systematic way to find all possible solutions to a problem by trying out different options and undoing them if they fail to satisfy the given constraints. For the 8 Queens Problem, the backtracking algorithm works as follows:
+### Manual Mode:
 
-1. Start with an empty chessboard.
-2. Try placing a queen in the first row and the first column.
-3. Check if the queen's placement is valid (no other queen threatens it).
-4. If it's valid, move to the next row and repeat the process recursively.
-5. If no valid placement is possible for the current row, backtrack to the previous row and try a different placement for the queen in the previous row.
-6. Continue this process until all queens are placed successfully or all possibilities are exhausted.
+1. Make sure you have Python and Pygame installed on your system.
 
-The backtracking algorithm guarantees to find a valid solution for the 8 Queens Problem because it explores all possible combinations while adhering to the constraints of the problem.
+2. Clone this repository to your local machine.
 
-## Contributions
+3. Open a terminal or command prompt and navigate to the repository's directory.
 
-Contributions to this project are welcome! If you have any ideas for improvement or new features, feel free to submit a pull request.
+4. Run the `queens.py` script:
+   ```bash
+   python queens.py
+   ```
+
+5. A window with an 8x8 chessboard will appear.
+
+6. To place a queen on the board, click on the desired cell. A queen will be placed if the move is valid.
+
+7. To delete a queen from the board, click on a cell with an already placed queen. The queen will be removed from that cell.
+
+8. Try to position all the queens safely so that no two queens threaten each other.
+
+### Automatic Mode:
+
+1. Make sure you have Python installed on your system.
+
+2. Clone this repository to your local machine.
+
+3. Open a terminal or command prompt and navigate to the repository's directory.
+
+4. Run the `queens_backtracking.py` script:
+   ```bash
+   python queens_backtracking.py
+   ```
+
+5. Sit back and enjoy the visualization of how the backtracking algorithm works to solve the 8 Queens problem. The script will display each step of the backtracking algorithm until a valid solution is found.
+
+## What is Backtracking?
+
+Backtracking is a systematic algorithm for finding solutions to problems by incrementally building candidates and discarding those that fail to satisfy the conditions of the problem. It is a depth-first search algorithm that works through all possible configurations of a problem until a solution is found or all options are exhausted.
+
+In the context of the N Queens Game, backtracking is used to find a valid arrangement of queens on the chessboard without any queen attacking each other. The algorithm starts with an empty board and tries placing queens one by one in different columns, backtracking when it encounters a situation where a queen threatens another. It continues this process until all queens are placed correctly or exhausts all possibilities.
+
+Backtracking is particularly useful when searching for a solution in a large search space where a naive brute-force approach would be impractical. It efficiently prunes branches that lead to invalid solutions, significantly reducing the search space and improving the time complexity.
+
+## Contributing
+
+Feel free to contribute to this repository by submitting bug reports, feature requests, or pull requests. We welcome any improvements or new features that enhance the N Queens Game implementation.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 **Happy Problem Solving!** 🚀
