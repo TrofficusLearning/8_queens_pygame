@@ -68,6 +68,9 @@ class Chessboard:
     def get_queen_at(self, row, col):
         return self.board[row][col]
 
+    def is_queen_at(self, row, col):
+        return isinstance(self.board[row][col], Queen)
+
     def place_queen(self, row, col):
         if self.board[row][col] is None:
             piece = Queen(QUEEN_IMAGE, row, col)
@@ -115,6 +118,9 @@ class ChessboardBacktracking:
 
     def get_queen_at(self, row, col):
         return self.board[row][col]
+
+    def is_queen_at(self, row, col):
+        return isinstance(self.board[row][col], Queen)
 
     def place_queen(self, row, col):
         if self.board[row][col] is None:
